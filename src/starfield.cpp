@@ -1,5 +1,5 @@
 #include "starfield.h"
-#include <iostream>
+#include "shader.h"
 
 Starfield::Starfield(sf::RenderWindow &window) : window(window)
 {
@@ -7,7 +7,7 @@ Starfield::Starfield(sf::RenderWindow &window) : window(window)
 		throw std::runtime_error("Shaders are not available");
 	}
 
-	if (!shader.loadFromMemory(starShaderF, sf::Shader::Fragment)) {
+	if (!shader.loadFromMemory(shader::starShaderF, sf::Shader::Fragment)) {
 		throw std::runtime_error("Failed to load shaders from memory");
 	}
 
