@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "starfield.h"
 #include <iostream>
+#include <memory>
 
 int main(int argc, char *argv[])
 {
